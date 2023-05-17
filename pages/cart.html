@@ -10,7 +10,7 @@
     <title>Cart</title>
 </head>
 <body>
-  <div class="herorest">
+  <div class="hero">
     <header>
       <nav class="navbar navbar-expand-lg nav">
         <div class="container-fluid">
@@ -40,74 +40,87 @@
                 Join the experience
             </a>
             <a href="../pages/cart.html">
-                <img src="../assets/img/cart.svg" alt="cart">
+              <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.375 3.375H3.85579C4.70465 3.375 5.12981 3.375 5.47603 3.52815C5.78128 3.66317 6.04227 3.88057 6.23047 4.15624C6.44357 4.46838 6.52052 4.8852 6.67412 5.71719L10.5417 26.6667H29.2141C30.026 26.6667 30.4333 26.6667 30.7696 26.5232C31.0668 26.3965 31.323 26.1912 31.5133 25.9301C31.7285 25.635 31.8197 25.24 32.0017 24.4506L32.0031 24.445L34.8146 12.2616L34.8153 12.2591C35.0916 11.0615 35.2301 10.4613 35.078 9.99051C34.9445 9.57743 34.6638 9.22719 34.2913 9.00427C33.8663 8.75 33.2525 8.75 32.0214 8.75H7.85417M30.25 35.625C29.2605 35.625 28.4583 34.8229 28.4583 33.8333C28.4583 32.8438 29.2605 32.0417 30.25 32.0417C31.2395 32.0417 32.0417 32.8438 32.0417 33.8333C32.0417 34.8229 31.2395 35.625 30.25 35.625ZM12.3333 35.625C11.3438 35.625 10.5417 34.8229 10.5417 33.8333C10.5417 32.8438 11.3438 32.0417 12.3333 32.0417C13.3228 32.0417 14.125 32.8438 14.125 33.8333C14.125 34.8229 13.3228 35.625 12.3333 35.625Z" stroke="#00E0FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>  
             </a>
           </div>
         </div>
       </nav>
     </header>
-    <h1>CART</h1>
+    <section>
+      <h1>CART</h1>
+    </section>
   </div>
   
   <main>
-    <div class="row">
-      <h3>Cart</h3>
-      <p>Price</p>
+    <div class="row cajonCarrito ">
+      <div class="col-md-6">
+        <h3 class="cartText d-flex">Cart</h3>
+      </div>
+      <div class="col-md-6">
+        <p class="priceText d-flex">Price</p>
+      </div>
+      <img class="lineaCart" src="../assets/img/lineaCart.svg" alt="">
       <div class="row">
         <div class="col-md-4">
-          <img src="../assets/img/fotoCart1.png" alt="">
-
+          <img class="imgCart"src="../assets/img/fotoCart1.png" alt="">
         </div>
         <div class="col-md-4">
-            <h3>Snorkeling</h3>
-            <p>Delete | Save for later | Buy now</p>
+            <h3 class="tourCart">Snorkeling</h3>
+            <p class="buttonsCart">Delete | Save for later | Buy now</p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 addCart">
           <svg width="126" height="40" viewBox="0 0 126 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0.5" y="0.5" width="125" height="39" rx="2.5" fill="white" stroke="#A6A6A6"/>
             <line x1="6" y1="19.5" x2="19" y2="19.5" stroke="#A6A6A6"/>
             <line x1="103" y1="19.5" x2="116" y2="19.5" stroke="#1462F9"/>
             <line x1="109.5" y1="13" x2="109.5" y2="26" stroke="#1462F9"/>
             <path d="M63.7773 11.7227V26H62.6152V13.1973L58.748 14.6328V13.5293L63.582 11.7227H63.7773Z" fill="black"/>
-            </svg>
-            
+          </svg> 
+          <p class="priceCart">$60</p>
         </div>
       </div>
+      <img class="lineaCart" src="../assets/img/lineaCart.svg" alt="">
       <div class="row">
         <div class="col-md-4">
-          <img src="../assets/img/fotoCart2.png" alt="">
+          <img class="imgCart"src="../assets/img/fotoCart2.png" alt="">
         </div>
         <div class="col-md-4">
-            <h3>Shark diving</h3>
-            <p>Delete | Save for later | Buy now</p>
+            <h3 class="tourCart">Shark diving</h3>
+            <p class="buttonsCart">Delete | Save for later | Buy now</p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 addCart">
           <svg width="126" height="40" viewBox="0 0 126 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0.5" y="0.5" width="125" height="39" rx="2.5" fill="white" stroke="#A6A6A6"/>
             <line x1="6" y1="19.5" x2="19" y2="19.5" stroke="#A6A6A6"/>
             <line x1="103" y1="19.5" x2="116" y2="19.5" stroke="#1462F9"/>
             <line x1="109.5" y1="13" x2="109.5" y2="26" stroke="#1462F9"/>
             <path d="M63.7773 11.7227V26H62.6152V13.1973L58.748 14.6328V13.5293L63.582 11.7227H63.7773Z" fill="black"/>
-            </svg>
-            
+          </svg> 
+          <p class="priceCart">$120</p>  
         </div>
+        
+          
       </div>
+      <img class="lineaCart" src="../assets/img/lineaCart.svg" alt="">
       <div class="row">
         <div class="col-md-4">
-          <img src="../assets/img/fotoCart3.png" alt="">
+          <img class="imgCart"src="../assets/img/fotoCart3.png" alt="">
         </div>
         <div class="col-md-4">
-            <h3>Shipwreck</h3>
-            <p>Delete | Save for later | Buy now</p>
+            <h3 class="tourCart">Shipwreck</h3>
+            <p class="buttonsCart">Delete | Save for later | Buy now</p>
         </div>
-        <div class="col-md-4">
-          <svg width="126" height="40" viewBox="0 0 126 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="col-md-4  bg-primary">
+          <svg class="addCart" width="126" height="40" viewBox="0 0 126 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0.5" y="0.5" width="125" height="39" rx="2.5" fill="white" stroke="#A6A6A6"/>
             <line x1="6" y1="19.5" x2="19" y2="19.5" stroke="#A6A6A6"/>
             <line x1="103" y1="19.5" x2="116" y2="19.5" stroke="#1462F9"/>
             <line x1="109.5" y1="13" x2="109.5" y2="26" stroke="#1462F9"/>
             <path d="M63.7773 11.7227V26H62.6152V13.1973L58.748 14.6328V13.5293L63.582 11.7227H63.7773Z" fill="black"/>
             </svg>
+            <p class="priceCart">$100</p>
         </div>
       </div>
       <div class="row">
@@ -123,12 +136,14 @@
   </main>
   <footer>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="./pages/tours.html">Tours</a></li>
-      <li><a href="./pages/aboutUs.html">About Us</a></li>
-      <li><a href="./pages/contact.html">Contact</a></li>
+        <li><a class= "navText " href="../index.html">Home</a></li>
+        <li><a class= "navText" href="./tours.html">Tours</a></li>
+        <li><a class= "navText" href="./aboutUs.html">About Us</a></li>
+        <li><a class= "navText" href="./contact.html">Contact</a></li>
     </ul>
-  </footer>
-    <script src="../js/main.js"></script>
+    <img class = "logoWave" src="../assets/img/favicon.svg" alt="logoWave">
+</footer>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>

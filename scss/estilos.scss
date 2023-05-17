@@ -9,6 +9,7 @@
 
 html{
     font-size:62.5%;
+    overflow-x: hidden;
 }
 body{
     margin:0;
@@ -21,17 +22,24 @@ section{
 }
 main{
     margin-left:12em;
+    margin-right:12em;
+}
+
+
+.heroIndex{
+    background: linear-gradient(0.39deg, rgba(0, 0, 0, 0) 7.73%, rgba(0, 0, 0, 0.44) 77.98%, #000000 99.24%), url(../assets/img/fondoHero.png);
+    height:110vh;
+    background-size: cover;
 }
 
 .hero{
     background: linear-gradient(0.39deg, rgba(0, 0, 0, 0) 7.73%, rgba(0, 0, 0, 0.44) 77.98%, #000000 99.24%), url(../assets/img/fondoHero.png);
-    height:100vh;
+    height:44rem;
     background-size: cover;
 }
 
 .nav{
     margin-left:12em;
-    margin-right:12em;
 }
 
 .logo{
@@ -46,14 +54,17 @@ main{
 
 .links{
     margin-left:12.6em;
-    margin-right:31.6em;
+    margin-right:42em;
 }
 .navText{
     color:white;
     font-size:2rem;
     margin-right: 2.8rem;
     white-space:nowrap;
+}
 
+.navText:hover{
+    color:#32B7E1;
 }
 
 .arrow{
@@ -65,10 +76,563 @@ main{
     color: #FFEB33;
     text-decoration:none;
     font-size:2rem;
+    padding-right:1em;
+}
+
+.arrowText:hover{
+    color:#FFEB33;
+}
+.arrowText:hover img{
+    transform: translateX(-15px);
+}
+
+.arrowText img{
+    width:20px;
+    transition: transform .3s;
 }
 .cart{
     color:white;
     width:4.3rem;
+}
+
+.cartActive{
+    border: 5px solid #00E0FF
+}
+
+h1{
+    margin-top:2.1em;
+    font-size:6.4rem;
+    font-weight: bold;
+    width:78rem;
+    color:white;
+    font-family: 'Roboto';
+}
+
+.h2Index{
+    margin-top:1.5em;
+    font-size:2.6rem;
+    font-weight: light;
+    font-family: 'roboto';
+    color:white;
+    width: 50rem;
+    line-height: 132.7%;
+}
+
+.line1{
+    width:0.1rem;
+    height:30rem;
+    margin-top:-15em;
+
+}
+.line2{
+    margin-top:24.7em;
+    margin-left:-0.35em;
+    width: 13rem;
+    margin-bottom:16.7em;
+}
+
+.buttonHero1{
+    padding-top:24em;
+}
+.buttonHero{
+    text-decoration:none;
+    color:white;
+    font-family:'Roboto';
+    font-weight: bold;
+    font-size:2rem;
+    background: #F19A17;
+    border-radius: 10px;
+    padding: 0.5em 1.8em;
+    margin-top:50em;
+    
+}
+
+.buttonHero:hover{
+    color:#F19A17;
+    background-color: white;
+}
+
+.rightHero{
+    background: rgba(217, 217, 217, 0.1);
+    backdrop-filter: blur(5px);
+    width:88rem;
+    height:57rem;
+    margin-top:21em;
+    padding:4.5em 8.4em;
+    padding-bottom:7.7em;
+    h2{
+        color:white;
+        font-weight: bold;
+        font-size: 2.7rem;
+        font-family: 'Roboto';
+    }
+    p{
+        color:white;
+        font-family: 'Roboto';
+        font-weight: light;
+        font-size: 2rem;
+        margin-top:0.5em;
+    
+    }
+    .row{
+        margin-bottom:3.7em;
+
+    }
+}
+
+.barraColorIzq{
+    background-color: #17252D;
+    width: 25rem;
+    height:70rem;
+    margin-left:-12em;
+    margin-top:-35.6em;
+    margin-bottom:-20em;
+}
+
+.foto{
+    width:36em;
+    margin-top:1.8em;
+    
+}
+.fotos{
+    h2{
+        font-family: 'Roboto';
+        font-weight: bold;
+        color:white;
+        font-size:2.7rem;
+        margin-top:1em;
+    }
+    p{
+        font-family: 'Roboto';
+        font-weight: light;
+        font-size:2rem;
+        color:white;
+        width:26em;
+    }
+}
+
+footer{
+    background-color: #1D1B1F;
+    margin-top:17.4em;
+    ul{
+        list-style: none;
+        display:flex;
+        justify-content: center;
+        li{
+            margin-top: 2em;
+        }
+        a{
+            text-decoration: none;
+        }
+        
+    }
+    .logoWave{
+        margin-left: 48.8%;
+        margin-bottom:2em;
+        width: 4.9rem;
+    }
+}
+
+.subtTours{
+    font-family: 'Roboto';
+    font-size: 2.7rem;
+    font-weight:bold;
+    color: white;
+    
+}
+
+.pTours{
+    font-family: 'Roboto';
+    font-size: 2rem;
+    font-weight:light;
+    color: white;
+    width: 80%;
+    margin-top:1em;
+}
+
+.Tour{
+    margin-top:8em;
+    
+}
+
+.tourImg{
+    width:39vw;
+}
+.buttonTour1{
+    background: #D9D9D9;
+    border-radius: 8px 0px 0px 8px;
+    font-size:2rem;
+    font-family: 'Roboto';
+    color:black;
+    font-weight: 600;
+    padding: 0.7em 2em;
+    text-decoration:none;
+    letter-spacing: 0.07em;
+}
+
+.buttonTour1:hover{
+    color:black;
+}
+
+.buttonTour2{
+    font-size:2rem;
+    color:#00E0FF;
+    background: rgb(23, 37, 45);
+    border-radius: 0px 8px 8px 0px;
+    font-weight: 600;
+    padding-top:0.59em;
+    padding-bottom:0.69em;
+    padding-left:0.6em;
+    padding-right: 0.6em;
+    text-decoration: none;
 
 }
 
+.buttonTour2:hover{
+    color:#00E0FF;
+}
+.ola{
+    display:flex;
+    margin: 0 auto;
+    margin-top: 2.7em;
+}
+
+.subtAbout{
+    font-size:6.4rem;
+    font-weight: bold;
+    color:white;
+    font-family: 'Roboto';
+    text-align:center;
+    margin-top: 0.2em;
+}
+
+.cuadroAbout{
+    background-color: #17252D;
+    width: 109.6em;
+    margin: 0 auto;
+    margin-top: 6.8em;
+    p{
+        color:white;
+        font-family: 'Roboto';
+        font-size:2rem;
+        font-weight: light;
+        padding-left: 11em;
+        padding-top: 4em;
+        padding-bottom: 11em;
+        padding-right: 11em;
+        text-align: center;
+    }
+}
+
+.imgAbout{
+    display:flex;
+    margin: 0 auto;
+    width:70.9em;
+    margin-top:-17em;
+}
+
+.p2About{
+    color:white;
+    font-family: 'Roboto';
+    font-size:2rem;
+    font-weight: light;
+    margin-top:3.5em;
+    text-align: center;
+    margin-left: 15em;
+    margin-right: 15em;
+}
+
+.p2About2{
+    @extend .p2About;
+    margin-top:1em;
+}
+
+.membersBackground{
+    background: #17252D;
+    height: 22em;
+    margin-top: 6.6em;
+    margin-left:-13em;
+    margin-right:-13em;
+}
+
+.members{
+    margin-top:-19em;
+    img{
+        margin-bottom:1em;
+        margin-left:5em;
+    }
+    h3{
+        color:white;
+        font-family: 'Roboto';
+        font-size:2rem;
+        font-weight: bold;
+        text-align: center;
+    }
+    p{
+        color:white;
+        font-family: 'Roboto';
+        font-size:2rem;
+        font-weight: light;
+        text-align: center;
+    }
+}
+.pintura{
+    width:100rem;
+    margin-top:8em;
+    margin-bottom:-25em;
+}
+
+.pinturaText{
+    color:white;
+    font-family: 'Roboto';
+    font-size:3.5rem;
+    font-weight: bold;
+    margin-left:6em;
+    padding-top:5em;
+}
+
+.buttonAbout{
+    background: #D9D9D9;
+    border-radius: 10px;
+    color:black;
+    font-family: 'Roboto';
+    font-size:2.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding:1.05em 3em;
+    margin-top:7.5em;
+    margin-right:10em;
+    display:flex;
+}
+
+.buttonAbout:hover{
+    color:black;
+    background-color:#00E0FF;
+}
+
+.subtContact{
+    font-size:5rem;
+    font-weight: bold;
+    color:white;
+    font-family: 'Roboto';
+    text-align:center;
+    margin-top: 0.2em;
+}
+
+.textContact{
+    font-size:2rem;
+    color:white;
+    font-family: 'Roboto';
+    text-align:center;
+    margin-top: 3em;
+    margin-left:15.7em;
+    margin-right: 15.7em;
+}
+
+.formulario{
+    background: #17252D;
+    box-shadow: 10px 10px 4px rgba(0, 224, 255, 0.24);
+    width:130rem;
+    height:86.53rem;
+    margin: 0 auto;
+    margin-top:5.8em;
+    h2{
+        font-size:5rem;
+        color:white;
+        font-family: 'Roboto';
+        text-align:center;
+        font-weight: bold;
+        padding-top:1.5em;
+    }
+}
+
+.nameBox{
+    background: #D9D9D9;
+    border-radius: 5px;
+    width:110rem;
+    height:5.3rem;
+    margin:0 auto;
+    margin-top:4.2em;
+}
+
+.textBox{
+    font-family: 'Roboto';
+    font-weight: thin;
+    font-size: 2rem;
+    color: #17252D;
+    margin-top:0.5em;
+}
+
+.imgBox{
+    width:2.7rem;
+    margin-top:-0.2em;
+    margin-left:1em;
+    margin-right:1em;
+}
+
+.emailBox1{
+    background: #D9D9D9;
+    border-radius: 5px;
+    width:52rem;
+    height:5.3rem;
+    margin:0 auto;
+    margin-top:4.2em;
+    margin-left:8.2em;
+}
+
+.emailBox2{
+    background: #D9D9D9;
+    border-radius: 5px;
+    width:52rem;
+    height:5.3rem;
+    margin:0 auto;
+    margin-top:4.2em;
+    margin-right:8.2em;
+}
+
+.messageBox{
+    @extend .nameBox;
+        height:25rem;
+}
+
+.askBox{
+    background: #F19A17;
+    border-radius: 5px;
+    width:110rem;
+    height:5.3rem;
+    margin:0 auto;
+    margin-top:4.2em;
+}
+
+.askText{
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 2.5rem;
+    color:white;
+    text-align:center;
+    padding-top:0.3em;
+}
+
+.askBox:hover{
+    background-color:white;
+    p{
+        color: #F19A17;
+    }
+}
+
+.contactos{
+    background: #D9D9D9;
+    width:100vw;
+    height:17.4rem;
+    margin-top: 6.8em;
+    margin-left:-12em;
+    .logoContact{
+        width:19rem;
+        margin: 0 auto;
+    } 
+}
+
+.direcciones{
+    margin-left:12em;
+    margin-right:7.8em;
+    gap:14em;
+    p{
+        font-size:2rem;
+    
+        .item{
+            width:4rem;
+            padding-right:0.5em;
+        }
+    }
+}
+
+.ola2{
+    display:flex;
+    margin: 0 auto;
+    margin-top: 6em;
+    margin-bottom:-10em;
+}
+
+.barraColor1{ 
+    background-color: #17252D;
+    width: 25rem;
+    height:30rem;
+    margin-left:-12em;
+    margin-top:-25em;
+    margin-bottom:0;
+}
+
+.barraColor2{ 
+    background-color: #17252D;
+    width: 40rem;
+    height:30rem;
+    margin-left:112em;
+    margin-top:-25em;
+    margin-bottom:0;
+}
+
+.cajonCarrito{
+    background: #FFFFFF;
+    box-shadow: 10px 10px 4px rgba(255, 255, 255, 0.25);
+    border-radius: 4px;
+    width:160rem;
+    margin-top:2.3em;
+}
+
+.cartText{
+    font-family: 'Roboto';
+    font-size: 3.4rem;
+    color:black;
+    margin-top: 2em;
+    margin-left:0.5em;
+}
+
+.priceText{
+    font-family: 'Roboto';
+    font-size: 2rem;
+    color:black;
+    font-weight: light;
+    margin-top: 4em;
+    margin-left:36em;
+}
+
+.lineaCart{
+    margin-bottom: 1em;
+    margin-left:0.5em;
+}
+
+.imgCart{
+    margin-bottom:1em;
+    margin-left:1em;
+    width: 40rem;
+}
+
+.tourCart{
+    font-weight: light;
+    font-size:3rem;
+    font-family:'Roboto';
+    margin-left:2em;
+}
+
+.buttonsCart{
+    font-weight: light;
+    font-size:1.8rem;
+    font-family:'Roboto';
+    margin-top:9.5em;
+    margin-left:3.3em;
+}
+
+.addCart{
+padding-right:-5em;
+align-items: end;
+
+}
+.priceCart{
+    font-weight: bold;
+    font-size:3rem;
+    font-family:'Roboto';
+    text-align: end;
+    margin-top:-1.4em;
+    padding-left:-10em;
+
+}
