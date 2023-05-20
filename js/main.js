@@ -1,9 +1,16 @@
 //Paquetes
-const paquetes = [
-  {letra: "A", nombre: "Snorkeling", precio: 60},
-  {letra: "B", nombre: "Shipwreck", precio: 100},
-  {letra: "C", nombre: "Dive with sharks", precio: 120}
-];
+class Paquete{
+  constructor(letra,nombre,precio){
+    this.letra = letra;
+    this.nombre = nombre;
+    this.precio = precio;
+  }
+}
+
+const paqueteA = new Paquete ("A","Snorkeling", 60);
+const paqueteB = new Paquete ("B","Shipwreck", 100);
+const paqueteC = new Paquete ("C","Dive with sharks", 120);
+
 
 const carrito = []
 let continuar = true;
@@ -34,10 +41,7 @@ while(seleccion != "SI" && seleccion != "NO"){
 
 if(seleccion == "SI"){
   alert ("A continuacion nuestros paquetes disponibles:")
-  let todosLosPaquetes = paquetes.map(
-      (paquete) => "> Paquete "+ paquete.letra + " - " + paquete.nombre + ": " + paquete.precio + "$"
-  );
-  alert(todosLosPaquetes.join("\n"))
+  alert(" > Paquete A - Snorkeling: 60$. \n > Paquete B - Shipwreck:100$. \n > Paquete C - Dive with sharks:120$.");
 } else if (seleccion == "NO"){
   alert("Gracias por venir, vuelva pronto!")
 }
@@ -96,6 +100,6 @@ if(seleccion != "NO"){
       continuar=confirm("Quiere eliminar otro paquete?")
   }
   
-  alert(`Carrito:\n ===================================== \n > Paquete A - Snorkeling: ${paquetesA} paquete/s x 60$ c/u. \n > Paquete B - Shipwreck: ${paquetesB} paquete/s x 100$ c/u. \n > Paquete C - Dive with sharks: ${paquetesC} paquete/s x 120$ c/u.\n===================================== \n \n Subtotal: ${paquetesA*60 + paquetesB*100+paquetesC*120} `)
+  alert(`Carrito:\n ===================================== \n > Paquete A - Snorkeling: ${paquetesA} paquete/s x 60$ c/u. \n > Paquete B - Shipwreck: ${paquetesB} paquete/s x 100$ c/u. \n > Paquete C - Dive with sharks: ${paquetesC} paquete/s x 120$ c/u.\n===================================== \n \n Subtotal: ${paquetesA*60 + paquetesB*100+paquetesC*120}`)
   alert("Gracias por su compra")  
 }
