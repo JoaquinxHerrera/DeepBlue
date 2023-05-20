@@ -1,107 +1,101 @@
 //Paquetes
-/*const paquetes =[
- {
-  letra:"A",
-  nombre:"Snorkeling",
-  precio:60,
-},
-  {
-    letra:"B",
-    nombre:"Shipwreck",
-    precio:100,
-},
-{
-  letra:"C",
-  nombre:"Dive with sharks",
-  precio:120,
-}
-]
+const paquetes = [
+  {letra: "A", nombre: "Snorkeling", precio: 60},
+  {letra: "B", nombre: "Shipwreck", precio: 100},
+  {letra: "C", nombre: "Dive with sharks", precio: 120}
+];
+
+const carrito = []
+let continuar = true;
+
+/*--No me salio filtrar el carrito por cada paquete para usar el lenght de estos nuevos arrays en vez de usar "paquetesA/B/C"
+const paquetesA = carrito.filter((paquete)=>paquete.letra==="A");
+const paquetesB = carrito.filter((paquete)=>paquete.letra==="B");
+const paquetesC = carrito.filter((paquete)=>paquete.letra==="C");
 */
-
-class Paquete {
-  constructor (letraPaquete,dia){
-    this.letraPaquete = letraPaquete
-    this.dia = dia
-  }
-}
-
-const paquetes = []
-let continuar = true
-let contadorA = 0;
-let contadorB = 0;
-let contadorC = 0;
+let paquetesA = 0
+let paquetesB = 0
+let paquetesC = 0
 
 function saludar() {
   let nombreUsuario = prompt("Ingrese su nombre:");
   let apellidoUsuario = prompt("Ingrese su apellido:");
-  alert("¡Bienvenido " + nombreUsuario + " " + apellidoUsuario +"!")
+alert("¡Bienvenido " + nombreUsuario + " " + apellidoUsuario +"!")
 }
 
 saludar();
 
-alert("Los paquetes disponibles son: \nA--> Snorkeling x $60  \nB--> Shipwreck x $100 \nC--> Dive with sharks x $120");
+let seleccion = prompt ("Desea contratar algun paquete? si/no").toUpperCase();
 
-while(continuar){
-  const letraPaquete = prompt("Ingrese el paquete deseado ").toUpperCase()
-  const dia = parseInt(prompt("Ingrese dia para el tour").toUpperCase())
-  const paquete = new Paquete (letraPaquete,dia)
-  paquetes.push(paquete)
-    if(letraPaquete === "A"){
-      contadorA = contadorA + 1;
-      alert("Paquete: Snorkeling" + " fue agregado al carrito con exito!")
-    }
-    if(letraPaquete === "B"){
-      alert("Paquete: Shipwreck"+ " fue agregado al carrito con exito!")
-      contadorB = contadorB + 1;
-    }
-    if(letraPaquete === "C"){
-      alert("Paquete: Dive with sharks"+ " fue agregado al carrito con exito!")
-      contadorC = contadorC + 1;
-    }
+while(seleccion != "SI" && seleccion != "NO"){
+  alert("Por favor, ingresa si o no")
+  seleccion = prompt("Desea contratar algun paquete? si/no").toUpperCase();
+}
+
+if(seleccion == "SI"){
+  alert ("A continuacion nuestros paquetes disponibles:")
+  let todosLosPaquetes = paquetes.map(
+      (paquete) => "> Paquete "+ paquete.letra + " - " + paquete.nombre + ": " + paquete.precio + "$"
+  );
+  alert(todosLosPaquetes.join("\n"))
+} else if (seleccion == "NO"){
+  alert("Gracias por venir, vuelva pronto!")
+}
+
+while(continuar && seleccion != "NO"){
+  let letra = prompt("Agrega un paquete al carrito").toUpperCase();
+  let precio = 0
+
+  if(letra == "A" || letra == "B" || letra == "C"){
+      switch(letra) {
+          case "A":
+              precio = 60;
+              paquetesA = paquetesA + 1
+              break;
+          case "B":
+              precio = 100;
+              paquetesB = paquetesB + 1
+              break;
+          case "C":
+              precio = 120;
+              paquetesC = paquetesC + 1
+              break;
+          default:
+              break;
+      }
+      carrito.push({letra,precio})
       
-      /*if(paquetes !== "A"&&"B"&&"C"&&"ESC"){
-          alert("Paquete inexistente, ingrese un paquete disponible")
-      }*/
-  continuar = confirm ("Quiere seguir cargando paquetes?") 
-}  
-
-let subtotal = contadorA*60 + contadorB*100 + contadorC*120;
-alert("Resumen del carrito: \n- Paquete A (Snorkeling): " + contadorA + " \n- Paquete B (Deep sea diving): " + contadorB + " \n- Paquete C (Shark diving): " + contadorC + "\n" +"\nSubtotal: " + subtotal);
-
-while (continuar){
-  const paqueteEliminar = prompt("Ingrese la letra del paquete a eliminar")
-  const index = paquetes.findIndex((paquete)=>paquete.letraPaquete == paqueteEliminar)
-  if (index != -1){
-    paquetes.splice(index,1)
-    alert("Paquete eliminado")
-  }else{
-    alert("Paquete no encontrado")
+  } else {
+      alert("El paquete ingresado no es valido, vuelva a intentarlo")
   }
-  continuar=confirm("Quiere eliminar otro paquete?")
+  
+  continuar = confirm("Desea seguir comprando?")
 }
-console.log(paquetes)
-/*
-continuar = confirm("Quiere eliminar algun paquete?")
-while (continuar){
-  const paqueteLetraEliminar = prompt ("que paquete desea eliminar?").toUpperCase()
-  const index = paquetes.findIndex((paquete)=> paquete.letra === paqueteLetraEliminar)
-    if(index != -1){
-      paquetes.splice(index,1)
-      alert("Paquete eliminado")
-        if(paqueteLetraEliminar === "A"){
-          contadorA = contadorA - 1;
-        }
-        if(paqueteLetraEliminar === "B"){
-          contadorB = contadorB - 1;
-        }
-        if(paqueteLetraEliminar === "C"){
-          contadorC = contadorC -1;
-        }
-    }else{
-      alert("El paquete es inexistente")
-    }
-  continuar = confirm ("Quiere eliminar algun producto?")
-}
+if(seleccion != "NO"){
+  alert(`Carrito:\n ===================================== \n > Paquete A - Snorkeling: ${paquetesA} paquete/s x 60$ c/u. \n > Paquete B - Shipwreck: ${paquetesB} paquete/s x 100$ c/u. \n > Paquete C - Dive with sharks: ${paquetesC} paquete/s x 120$ c/u.\n===================================== \n \n Subtotal: ${paquetesA*60 + paquetesB*100+paquetesC*120} `)
 
-*/
-alert("Resumen del carrito: \n- Paquete A (Snorkeling): " + contadorA + " \n- Paquete B (Deep sea diving): " + contadorB + " \n- Paquete C (Shark diving): " + contadorC + "\n" +"\nSubtotal: " + subtotal);
+  continuar = confirm("Quiere eliminar algun paquete?")
+  while (continuar){
+      const paqueteEliminar = prompt("Ingrese la letra del paquete a eliminar").toUpperCase()
+      const index = carrito.findIndex((paquete)=>paquete.letra == paqueteEliminar)
+      if (index != -1){
+          if (paqueteEliminar === "A"){
+              paquetesA = paquetesA - 1
+          }
+          if (paqueteEliminar === "B"){
+              paquetesB = paquetesB - 1
+          }
+          if (paqueteEliminar === "C"){
+              paquetesC = paquetesC - 1
+          }
+          carrito.splice(index,1)
+          alert("Paquete eliminado")
+      }else{
+          alert("Paquete no encontrado")
+      }
+      continuar=confirm("Quiere eliminar otro paquete?")
+  }
+  
+  alert(`Carrito:\n ===================================== \n > Paquete A - Snorkeling: ${paquetesA} paquete/s x 60$ c/u. \n > Paquete B - Shipwreck: ${paquetesB} paquete/s x 100$ c/u. \n > Paquete C - Dive with sharks: ${paquetesC} paquete/s x 120$ c/u.\n===================================== \n \n Subtotal: ${paquetesA*60 + paquetesB*100+paquetesC*120} `)
+  alert("Gracias por su compra")  
+}
