@@ -637,3 +637,72 @@ align-items: end;
     padding-left:-10em;
 
 }
+
+#contenedorTarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding:1em;
+    box-shadow: 10px 10px 4px rgba(255, 255, 255, 0.25);
+
+}
+
+.tarjeta{
+    width:250px;
+    height:32em;
+    border: 1px solid;
+    border-radius:5px;
+    overflow: hidden;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    margin:10px;
+}
+
+.tarjeta .contenido{
+    padding:1em;
+    font-family: 'Roboto';
+}
+
+
+
+.tarjeta img {
+    width: inherit;
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+.tarjeta button{
+    border-radius: 10px;
+    background-color:#00E0FF;
+    font-family: 'Roboto';
+    font-size:1.8rem;
+    display:flex;
+    padding:0em 4em;
+    margin:0 0.2em 0.3em;
+
+}
+
+.tarjeta button:hover{
+    color:rgb(255, 255, 255);
+    background-color:#a7a7a7;
+}
+
+.carrito{
+    text-decoration: none;
+    position:relative;
+}
+.numeroCarrito{
+    background-color: #0199ad;
+    border-radius: 50%;
+    color:white;
+    padding:2.5px 7.5px;
+    text-align:center;
+    position:absolute;
+    top:35px;
+    left:30px;
+}

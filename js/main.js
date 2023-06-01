@@ -15,7 +15,7 @@ const productos = [
     nombre: "Snorkel rojo + Mascara",
     precio: 60,
     stock: 7,
-    urlImg:"https://i.ibb.co/M52qp2r/e438486c01efd7c13bc4d4779e233ebeac8300e497ae45660a46165b187db33610306.png"
+    urlImg:"https://i.ibb.co/yPZ0wbw/e438486c01efd7c13bc4d4779e233ebeac8300e497ae45660a46165b187db33610306.png"
   },
   {
     nombre: "Neoprene azul",
@@ -68,12 +68,24 @@ const verProducto = ({nombre,precio,stock,urlImg}) => {
   tarjeta.className = "tarjeta"
   tarjeta.innerHTML = `
                       <img src="${urlImg}" alt="">
-                      <h3>${nombre}</h3>
-                      <span>${precio}</span>
-                      <span>${stock}</span>
-                      <button>Add to cart</button>                    
+                      <div class="contenido">
+                      <h3> <b>${nombre}</b></h3>
+                      <span><b>Precio:</b> $${precio} <b>Stock:</b>${stock}</span>
+                      </div>
+                      <form id="formCarrito">
+                      <input type="number" value="1" min="1" max="${stock}" >
+                      <button type="submit">Add to cart</button>   
+                      </form>
+                                       
   `
   contenedorTarjetas.append(tarjeta)
+}
+
+const agregarCarrito = () =>{
+  const formCarrito = document.querySelector("#formCarrito")
+  formCarrito.addEventListener("submit",(e)=>{
+    e.preventDefault()
+  })
 }
 
 const verProductos = () =>{
