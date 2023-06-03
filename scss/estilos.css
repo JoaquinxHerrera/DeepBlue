@@ -638,6 +638,7 @@ footer .logoWave {
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
   padding: 1em;
+  margin-top: 10em;
   box-shadow: 10px 10px 4px rgba(255, 255, 255, 0.25);
 }
 
@@ -669,11 +670,12 @@ footer .logoWave {
 .tarjeta button {
   border-radius: 10px;
   background-color: #00E0FF;
+  border: none;
   font-family: "Roboto";
   font-size: 1.8rem;
   display: flex;
-  padding: 0em 4em;
-  margin: 0 0.2em 0.3em;
+  padding: 0.2em 4em;
+  margin: 0.4em 0.4em 0.5em;
 }
 
 .tarjeta button:hover {
@@ -695,4 +697,13 @@ footer .logoWave {
   position: absolute;
   top: 35px;
   left: 30px;
+}
+
+.inputCantidad {
+  width: 100%;
+}
+
+.cantidadMargen {
+  margin-left: 0.7em;
+  margin-bottom: 0.2em;
 }/*# sourceMappingURL=estilos.css.map */
