@@ -88,7 +88,7 @@ const verProducto = ({id,nombre,precio,stock,urlImg}) => {
                           <input name="id" type="hidden"  value="${id}">
                         </div>
                         <div class "inputCantidad">
-                          <input class="cantidadMargen \" name="cantidad" type="number" value="1" min="1" max="${stock}" >
+                          <input class="cantidadMargen \" name="cantidad" type="number"  value="1" min="1"  cantidad max="${stock}">
                         </div>
                       <button type="submit">Add to cart</button>   
                       </form>

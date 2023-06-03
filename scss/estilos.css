@@ -706,4 +706,10 @@ footer .logoWave {
 .cantidadMargen {
   margin-left: 0.7em;
   margin-bottom: 0.2em;
+  font-family: Roboto;
+  font-weight: 600;
+  padding-left: 0.4em;
+  background-color: #d6d6d6;
+  border: 1px solid black;
+  border-radius: 5px;
 }/*# sourceMappingURL=estilos.css.map */
