@@ -7,6 +7,8 @@
     <link rel="icon" href="../assets/img/favicon.svg">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"> 
+    <link rel="stylesheet" href="/productos.json">
     <link rel="stylesheet" href="../scss/estilos.css">
     <title>Tours</title>
 </head>
@@ -40,9 +42,9 @@
                 <img class="arrow" src="../assets/img/Arrow 1.svg" alt="arrow">
                 Join the experience
             </a>  
-            <a class="carrito"href="../pages/cart.html">
+            <a class="carrito" id="verCarritoButton">
                 <img src="../assets/img/cart.svg" alt="cart">
-                <span class="numeroCarrito">0</span>
+                <span class="numeroCarrito" id="numeroCarrito">0</span>
             </a>
           </div>
         </div>
@@ -61,6 +63,7 @@
           <p class="pTours mb-5">Diving for all ages, get to see a lot of species in a comfortable way (no preparation needed). Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam odio sint facilis, accusamus quidem facere ad corrupti incidunt sunt?</p>
           <a class="buttonTour1"href="./cart.html">Add to cart</a><a class="buttonTour2 "href="./cart.html">$60</a>
         </div>
+        
       </div>
       <div class="barraColor1"></div>
       <div class="Tour row" data-aos="fade-right">
@@ -85,9 +88,8 @@
       </div>
       
       <div class="barraColor1"></div>
-      <h1>PRODUCTS</h1>
+      <h1>OUR PRODUCTS</h1>
       <div id = "contenedorTarjetas">
-
       </div>
       
 
@@ -101,11 +103,16 @@
       </ul>
       <img class = "logoWave" src="../assets/img/favicon.svg" alt="logoWave">
   </footer>
-  <script src="../js/main.js"></script>
+
+  <div id="modalContainer" class="modalContainer"></div>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script src="../js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="../productos.json"></script>
+  <script src="../js/main.js"></script>
   <script>
     AOS.init();
-</script>
+  </script>
 </body>
 </html>

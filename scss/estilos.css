@@ -559,7 +559,7 @@ footer .logoWave {
 
 .barraColor2 {
   background-color: #17252D;
-  width: 40rem;
+  width: 29rem;
   height: 30rem;
   margin-left: 112em;
   margin-top: -25em;
@@ -635,57 +635,81 @@ footer .logoWave {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: rgb(255, 255, 255);
   border-radius: 5px;
   padding: 1em;
-  margin-top: 10em;
-  box-shadow: 10px 10px 4px rgba(255, 255, 255, 0.25);
+  margin-top: 6em;
+  background: #17252D;
+  box-shadow: 10px 10px 4px rgba(0, 224, 255, 0.24);
 }
 
 .tarjeta {
   width: 250px;
   height: 32em;
+  padding-top: 1em;
   border: 1px solid;
   border-radius: 5px;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  background-color: white;
   margin: 10px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.53);
 }
 
-.tarjeta .contenido {
-  padding: 1em;
+.tituloTarjeta {
   font-family: "Roboto";
+  font-size: 2.2rem;
+  margin-top: 1em;
+  margin-left: 0.4em;
+  margin-bottom: -0.5em;
+  color: #6a6a6a;
+}
+
+.precio {
+  font-size: 3rem;
+}
+
+.inStock {
+  color: #007600;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: 0.7em;
+}
+
+.contenidoCuerpo {
+  padding: 0.7em;
+  display: flex;
+  justify-content: space-between;
 }
 
 .tarjeta img {
   width: inherit;
-  height: 350px;
+  height: 300px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .tarjeta button {
-  border-radius: 10px;
-  background-color: #00E0FF;
+  background: #F19A17;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.53);
+  border-radius: 3px;
   border: none;
   font-family: "Roboto";
   font-size: 1.8rem;
   display: flex;
   padding: 0.2em 4em;
-  margin: 0.4em 0.4em 0.5em;
+  margin: 0em 0.4em 0.5em;
+  cursor: pointer;
 }
 
 .tarjeta button:hover {
-  color: rgb(255, 255, 255);
-  background-color: #a7a7a7;
+  background-color: #d48815;
 }
 
 .carrito {
   text-decoration: none;
   position: relative;
+  cursor: pointer;
 }
 
 .numeroCarrito {
@@ -697,19 +721,224 @@ footer .logoWave {
   position: absolute;
   top: 35px;
   left: 30px;
-}
-
-.inputCantidad {
-  width: 100%;
+  display: none;
 }
 
 .cantidadMargen {
   margin-left: 0.7em;
   margin-bottom: 0.2em;
+  width: 4rem;
   font-family: Roboto;
   font-weight: 600;
   padding-left: 0.4em;
   background-color: #d6d6d6;
   border: 1px solid black;
   border-radius: 5px;
+}
+
+.modalContainer {
+  width: 80%;
+  margin: 0 10%;
+  max-height: 88vh;
+  border-radius: 5px;
+  color: white;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  overflow: auto;
+  z-index: 9;
+  top: 12vh;
+  scrollbar-color: none;
+}
+
+.modalContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  width: 100%;
+  height: 12em;
+}
+.modalHeader .modalHeaderTitle {
+  color: rgb(0, 0, 0);
+  margin-top: 1em;
+  margin-left: 0.8em;
+  font-weight: 300;
+}
+.modalHeader .modalHeaderButton {
+  cursor: pointer;
+  display: flex;
+  justify-self: end;
+  color: #000000;
+  padding-right: 1.8em;
+  margin-top: 1em;
+  font-weight: 300;
+}
+.modalHeader .lineaCart {
+  width: 115%;
+  margin-left: -10em;
+  margin-top: 2em;
+  padding: 0;
+  display: flex;
+}
+
+.lineaCartProduct {
+  width: 200%;
+}
+
+.modalContainer .modalContent {
+  width: 90%;
+  margin: 10px;
+}
+
+.modalContentOut {
+  width: 100%;
+}
+.modalContentOut .modalContent {
+  display: flex;
+  flex-direction: row;
+}
+.modalContentOut .modalContent .imgCart {
+  width: auto;
+  margin-right: 3em;
+}
+.modalContentOut .modalContent .contentCart {
+  width: 80%;
+  margin-top: 1em;
+  color: black;
+}
+.modalContentOut .modalContent .contentCart .primeraFila {
+  display: flex;
+  width: 104.5%;
+  height: 15.5em;
+}
+.modalContentOut .modalContent .contentCart .primeraFila .contentCartIzquierda {
+  width: 40%;
+  height: 5rem;
+  color: #545454;
+}
+.modalContentOut .modalContent .contentCart .primeraFila .contentCartIzquierda h3 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+.modalContentOut .modalContent .contentCart .primeraFila .contentCartDerecha {
+  width: 60%;
+  display: flex;
+  justify-content: end;
+  margin-right: 2em;
+}
+.modalContentOut .modalContent .contentCart .primeraFila .contentCartDerecha .precio p {
+  font-size: 2.5rem;
+}
+.modalContentOut .modalContent .contentCart .primeraFila .contentCartDerecha .precioTotal {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+.modalContentOut .modalContent .contentCart .primeraFila .contentCartDerecha .precioTotal p {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+.modalContentOut .modalContent .contentCart .primeraFila .contentCartDerecha .deleteProduct {
+  width: 2em;
+  height: 2em;
+  margin-top: 0.8em;
+  background-color: #c5c5c5;
+  border-radius: 50%;
+  padding: 0.4em;
+}
+.modalContentOut .modalContent .contentCart .segundaFila {
+  display: flex;
+  gap: 2em;
+  color: #000000;
+}
+.modalContentOut .modalContent .contentCart .segundaFila .inStockCart {
+  display: flex;
+  margin-top: 0.7em;
+  margin-left: 10em;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #007600;
+}
+.modalContentOut .modalContent .contentCart .segundaFila .cantidades {
+  display: flex;
+  position: absolute;
+  gap: 1em;
+  align-items: center;
+  border: 1px solid rgb(125, 125, 125);
+  background-color: rgb(232, 232, 232);
+  border-radius: 50px;
+  padding: 0 1em;
+  color: black;
+}
+.modalContentOut .modalContent .contentCart .segundaFila .cantidades p {
+  margin-top: 0.7em;
+}
+.modalContentOut .lineaCartProduct {
+  display: flex;
+  width: 90%;
+  margin-left: 3.5em;
+  margin-top: -10em;
+  margin-bottom: -8em;
+}
+
+.modalContainer div img {
+  height: 20em;
+  width: 20em;
+}
+
+.totalContent {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-right: 13em;
+  margin-top: -2em;
+}
+
+.totalContent div {
+  display: flex;
+  justify-content: end;
+  font-size: 25px;
+  width: 100%;
+  color: black;
+}
+.totalContent div b {
+  font-size: 25px;
+  margin-left: 0.4em;
+}
+
+.checkoutButton {
+  display: flex;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  background: #17252D;
+  border-radius: 3px;
+  padding: 0.2em 1em;
+  color: white;
+  border: none;
+}
+
+.carritovacio {
+  display: flex;
+  font-size: 4rem;
+  padding: 5em;
+  margin: 50em;
+}
+
+.deleteProduct {
+  cursor: pointer;
+}
+
+.restar {
+  cursor: pointer;
+}
+
+.sumar {
+  cursor: pointer;
 }/*# sourceMappingURL=estilos.css.map */

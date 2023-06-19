@@ -39,8 +39,9 @@
                         <img class="arrow" src="./assets/img/Arrow 1.svg" alt="arrow">
                         Join the experience
                     </a>
-                    <a href="./pages/cart.html">
+                    <a class="carrito" id="verCarritoButton">
                         <img src="./assets/img/cart.svg" alt="cart">
+                        <span class="numeroCarrito" id="numeroCarrito">0</span>
                     </a>
                   </div>
                 </div>
@@ -112,6 +113,14 @@
         </ul>
         <img class = "logoWave" src="./assets/img/favicon.svg" alt="logoWave">
     </footer>
+    <div id="modalContainer" class="modalContainer"></div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="../productos.json"></script>
+  <script src="./js/main.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
