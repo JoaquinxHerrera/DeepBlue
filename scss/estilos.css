@@ -92,6 +92,11 @@ main {
   transition: transform 0.3s;
 }
 
+.rightHero .row:hover {
+  border-left-color: white;
+  background-color: rgba(153, 153, 153, 0.1);
+}
+
 .cart {
   color: white;
   width: 4.3rem;
@@ -161,7 +166,7 @@ h1 {
   width: 88rem;
   height: 57rem;
   margin-top: 21em;
-  padding: 4.5em 8.4em;
+  padding: 4.5em 0em;
   padding-bottom: 7.7em;
 }
 .rightHero h2 {
@@ -169,6 +174,7 @@ h1 {
   font-weight: bold;
   font-size: 2.7rem;
   font-family: "Roboto";
+  padding: 0;
 }
 .rightHero p {
   color: white;
@@ -176,9 +182,15 @@ h1 {
   font-weight: light;
   font-size: 2rem;
   margin-top: 0.5em;
+  padding: 0;
+
 }
 .rightHero .row {
   margin-bottom: 3.7em;
+  border-left: 5px solid transparent;
+  margin-left: 1px;
+  padding-left: 8.4em;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .barraColorIzq {
@@ -404,7 +416,7 @@ footer .logoWave {
 
 .buttonAbout:hover {
   color: black;
-  background-color: #00E0FF;
+  background-color: #bababa;
 }
 
 .subtContact {
@@ -498,6 +510,7 @@ footer .logoWave {
   height: 5.3rem;
   margin: 0 auto;
   margin-top: 4.2em;
+  cursor: pointer;
 }
 
 .askText {
@@ -898,7 +911,7 @@ footer .logoWave {
   flex-wrap: wrap;
   width: 100%;
   margin-right: 13em;
-  margin-top: -2em;
+  
 }
 
 .totalContent div {
@@ -942,3 +955,311 @@ footer .logoWave {
 .sumar {
   cursor: pointer;
 }/*# sourceMappingURL=estilos.css.map */
+
+
+
+
+@media  screen and (max-width: 1440px){
+ .nav{
+  margin-right: 12em;
+ }
+
+  .links{
+    margin-right: 0;
+  }
+
+  .arrowText{
+    margin-left: auto;
+    
+  }
+  h1 {
+    font-size: 5rem;
+    width: 100%;
+  }
+  .h2Index {
+    font-size: 2rem;
+  }
+
+  .line1 {
+    width: 0.1rem;
+    height: 20rem;
+    margin-top: 0em;
+  }
+  
+  .line2 {
+    margin-top: -0.3em;
+    margin-left: 0;
+  }
+
+  .buttonHero1 {
+    padding-top: 14.4em;
+    padding-left: 2.5em;
+  }
+  
+ 
+  .rightHero{
+    width: 50%;
+    margin-top: 10%;
+  }
+  
+  .rightHero h2{
+    font-size: 2.5rem;
+  }
+
+  .rightHero p{
+    font-size: 1.7rem;
+    padding-right: 1em;
+  }
+
+  .foto{
+    width: 25em;
+  }
+
+  .fotos p{
+    font-size: 1.7rem;
+    margin-right: 1em;
+    width: 91%;
+  }
+
+  .cuadroAbout {
+    width: 100%;
+  }
+
+  .p2About{
+    margin: 3em 10em;
+  }
+  .p2About2{
+    margin: 0em 10em;
+  }
+
+  .members img{
+    margin:  1em 1.5em;
+  }
+  .buttonAbout {
+   width: 7em;
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    margin-top: 8em;
+    margin-right: 10em;
+  }
+  .pinturaText{
+    font-size: 2.9rem;
+    margin-top: 1.2em;
+  }
+  .textContact {
+    margin-left: 13em;
+    margin-right: 13em;
+  }
+  .formulario {
+    width: 95%;
+    height: 75rem;
+  }
+  .nameBox, .messageBox {
+    width: 90%;
+    height: 5rem;
+
+  }  
+  .emailBox1 {
+    width: 42%;
+    margin-left: 4.6em;
+  }
+  
+  .emailBox2 {
+    width: 42%;
+    margin-right: 4.7em;
+  }
+  
+  .messageBox {
+    height: 15rem;
+  }
+  
+  .askBox {
+    width: 90%;
+    height: 5.3rem;
+  }
+
+  .direcciones {
+    text-align: center;
+    gap: 10em;
+  }
+  .direcciones p {
+    font-size: 1.7rem;
+  }
+  .direcciones p .item {
+    width: 3.5rem;
+    padding-right: 0.5em;
+  } 
+
+}
+
+@media screen and (max-width: 768px){
+  .nav{
+    margin-right: 0;
+    margin-left: 0 ;
+  }
+  
+  .logo{
+    margin: 1em; 
+  }
+
+  section{
+    margin-left:1em;
+  }
+  
+  .line1{
+    display: none;
+  }
+  .line2{
+    display: none;
+  }
+  .buttonHero{
+    padding: 0.7em 5em;
+  }
+  .buttonHero1 {
+    padding-top: 26em;
+    padding-bottom: 2em;
+    text-align: center;
+    padding-left: 0;
+  }
+  h1{
+    font-size: 4rem;
+    margin-top: 4em;
+  }
+  .h2Index{
+    font-size: 1.8rem;
+    width: 90%;
+  }
+  .rightHero{
+    width: 100%;
+    padding-bottom: 0em;
+    height: auto;
+  }
+  .rightHero .row{
+    padding-left: 2em;
+    padding-right: 0;
+    margin-right: 0;
+  }
+  main{
+    margin-top: 35em;
+    width: 90%;
+    margin-left: 2em;
+  }
+  .foto{
+    width: 100%;
+    
+  }
+  .barraColorIzq{
+    width: 25rem;
+    height: 90rem;
+    margin-left: -12em;
+    margin-top: -60em;
+    margin-bottom: -20em;
+  }
+  .arrowText{
+    display: none;
+  }
+  .carrito{
+    display: none;
+  }
+  .navbar-collapse{
+    background-color: rgba(84, 84, 84, 0.476);
+    border-radius: 5px;
+  }
+  .barraColor2{
+    display: none;
+  }
+  .tourImg{
+    width: 100%;
+  }
+  .Tour1Right{
+    margin-left: 2.5em;
+    margin-top: 1em;
+  }
+  .buttonTour1{
+    padding-right: 3.5em;
+    padding-left: 3.5em;
+  }
+  
+
+  .Tour2Left {
+    margin-bottom: 3em;
+    margin-left: 2.5em;
+  }
+
+  .Tour3Right{
+    margin-left: 2.5em;
+  }
+  main{
+    margin-right: 0;
+  }
+  .subtAbout{
+    font-size: 4em;
+  }
+
+  .cuadroAbout{
+    margin-top: 3em;
+  }
+  .cuadroAbout p{
+   padding:0;
+   padding-bottom: 4em;
+   padding-top: 1em;
+   width: 100%;
+   
+  }
+  .subtAbout{
+    font-size: 5rem;
+  }
+  .imgAbout{
+    width: 100%;
+    margin-top: -6em;
+  }
+  .p2About{
+    margin: 0;
+    margin-top: 4em;
+  }
+  .p2About2{
+    margin: 0;
+  }
+  .membersBackground{
+    display: none;
+  }
+  .members{
+    margin-top: 5em;
+  }
+
+  .members img{
+    margin-left: 9em;
+  }
+  .pintura{
+    display: none;
+  }
+  .pinturaText{
+    display: none;
+  }
+  .buttonAbout{
+    margin:2em auto;
+  }
+  .subtContact{
+    font-size: 4rem;
+  }
+  .textContact{
+    margin: 0
+  }
+  .formulario h2{
+    font-size: 4rem;
+  }
+  .emailBox1{
+    margin: 2em;
+    width: 86%;
+  }
+  .contactos{
+    display: none;
+    
+  }
+  .emailBox2{
+    margin:0 2em;
+    width: 86%;
+  }
+}

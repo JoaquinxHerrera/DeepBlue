@@ -6,6 +6,30 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) ?? [];
 function getRandomInt(max){
   return Math.floor(Math.random() * max);
 }
+document.addEventListener('DOMContentLoaded', function() {
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  const navbarCollapse = document.querySelector('.navbar-collapse');
+
+  // Agregar evento de clic al botón de la barra de navegación
+  navbarToggler.addEventListener('click', function() {
+      // Alternar la clase 'show' en el menú desplegable
+      navbarCollapse.classList.toggle('show');
+  });
+
+  // Agregar evento de clic a la ventana
+  window.addEventListener('click', function(event) {
+      const target = event.target;
+
+      // Verificar si el clic ocurrió dentro o fuera del menú desplegable
+      const isClickInsideNavbarCollapse = navbarCollapse.contains(target);
+      const isNavbarToggler = target === navbarToggler;
+
+      // Si el clic está fuera del menú desplegable y del botón de la barra de navegación y el menú está abierto, cerrarlo
+      if (!isClickInsideNavbarCollapse && !isNavbarToggler && navbarCollapse.classList.contains('show')) {
+          navbarCollapse.classList.remove('show');
+      }
+  });
+});
 
 const getProducts = async () =>{
   const response = await fetch("../productos.json");
@@ -180,7 +204,7 @@ const pintarCarrito = () => {
 
   let checkoutButton = totalBuying.querySelector(".checkoutButton");
   checkoutButton.addEventListener("click",() => {
-    modalContainer.style.display = "none";
+    
     Swal.fire({
       icon: 'success',
       title: 'Thanks for your purchase!',
@@ -189,6 +213,7 @@ const pintarCarrito = () => {
       background: '#17252D',      
     })
     eliminarTodosProductos();
+    modalContainer.style.display = "none";
   });
 };
 
